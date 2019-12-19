@@ -1,9 +1,9 @@
 Sub cLeanDump()
-    Columns("FT:HE").Select
+    Columns("GB:HE").Select
     Application.CutCopyMode = False
     Selection.Delete Shift:=xlToLeft
     
-    Columns("DD:FR").Select
+    Columns("DF:FQ").Select
     Application.CutCopyMode = False
     Selection.Delete Shift:=xlToLeft
     
