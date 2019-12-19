@@ -7,28 +7,11 @@ Sub cLeanDump()
     Application.CutCopyMode = False
     Selection.Delete Shift:=xlToLeft
     
-    Columns("CO:DA").Select
+    Columns("CO:CS").Select
     Application.CutCopyMode = False
     Selection.Delete Shift:=xlToLeft
     
     Columns("AX:CM").Select
-    Application.CutCopyMode = False
-    Selection.Delete Shift:=xlToLeft
-    
-    Columns("AV:AV").Select
-    Application.CutCopyMode = False
-    Selection.Delete Shift:=xlToLeft
-    
-    Columns("AN:AS").Select
-    Application.CutCopyMode = False
-    Selection.Delete Shift:=xlToLeft
-    
-    
-    Columns("AI:AJ").Select
-    Application.CutCopyMode = False
-    Selection.Delete Shift:=xlToLeft
-    
-    Columns("q:AG").Select
     Application.CutCopyMode = False
     Selection.Delete Shift:=xlToLeft
     
