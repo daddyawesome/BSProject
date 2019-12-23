@@ -85,13 +85,64 @@ def degrees_to_radians(deg):
   return (deg * math.pi) / 180.0
 degrees_to_radians(90) # 1.5707963267948966
 
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#17. Calculate time taken to execute a piece of code
+import time
+start_time = time.time()
+a,b = 5,10
+c = a+b
+end_time = time.time()
+time_taken = (end_time- start_time)*(10**6)
+print("Time taken in micro_seconds:", time_taken) # Time taken in micro_seconds: 39.577484130859375
+
+#18. Find gcd of a list of numbers
+from functools import reduce
+import math
+def gcd(numbers):
+  return reduce(math.gcd, numbers)
+gcd([24,108,90]) # 6
+
+#19. Find unique characters in a string
+string = "abcbcabdb"   
+unique = set(string)
+new_string = ''.join(unique)
+print(new_string) # abcd
+
+#20. Use lambda functions
+x = lambda a, b, c : a + b + c
+print(x(5, 10, 20)) # 35
+
+#21. Use map functions
+def multiply(n): 
+    return n * n 
+  
+list = (1, 2, 3) 
+result = map(multiply, list) 
+print(list(result)) # {1, 4, 9}
+
+#22. Use filter functions
+arr = [1, 2, 3, 4, 5]
+arr = list(filter(lambda x : x%2 == 0, arr))
+print (arr) # [2, 4]
+
+#23. Use list comprehensions
+numbers = [1, 2, 3]
+squares = [number**2 for number in numbers]
+print(squares) # [1, 4, 9]
+
+#24. Use slicing operator
+def rotate(arr, d):
+  return arr[d:] + arr[:d]
+  
+if __name__ == '__main__':
+  arr = [1, 2, 3, 4, 5]
+  arr = rotate(arr, 2)
+  print (arr) # [3, 4, 5, 1, 2]
+
+#25. Use chained function call
+def add(a, b):
+    return a + b
+def subtract(a, b):   
+    return a - b
+a, b = 5, 10
+print((subtract if a > b else add)(a, b)) # 15
+
